@@ -20,3 +20,4 @@ xclip
 ack 
 build-essential
 zfsutils-linux
+duplicity
