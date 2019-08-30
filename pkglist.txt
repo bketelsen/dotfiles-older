@@ -19,3 +19,4 @@ software-properties-common
 xclip 
 ack 
 build-essential
+zfsutils-linux
