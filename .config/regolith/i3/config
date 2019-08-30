@@ -4,7 +4,7 @@
 
 # This defines which key super maps to on your keyboard.  
 # Alt key is Mod1, and Windows key is Mod4
-set $mod Mod4
+set $mod Mod1
 
 # Color values are defined in ~/.Xresources-regolith
 
@@ -145,7 +145,7 @@ bindsym $mod+Shift+grave move container to workspace $ws20
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# 
 bindsym $mod+Shift+r restart
 
 # exit i3
