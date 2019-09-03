@@ -21,3 +21,8 @@ ack
 build-essential
 zfsutils-linux
 duplicity
+direnv
+
+apt-transport-https
+syncthing-gtk
+exiv2
