@@ -23,5 +23,5 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias ci="code-insiders ."
 alias tmux="tmux -2"
-
+alias aptfix="sudo apt install --fix-broken"
 
