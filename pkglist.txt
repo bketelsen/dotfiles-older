@@ -26,3 +26,6 @@ direnv
 apt-transport-https
 syncthing-gtk
 exiv2
+apt-get
+install
+net-tools
