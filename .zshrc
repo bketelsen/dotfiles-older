@@ -71,7 +71,7 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   dotenv
-  go
+  golang
   mosh
   colorize
 )
