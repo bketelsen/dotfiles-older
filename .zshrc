@@ -73,6 +73,7 @@ plugins=(
   dotenv
   go
   mosh
+  colorize
 )
 
 source $ZSH/oh-my-zsh.sh
