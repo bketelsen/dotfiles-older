@@ -26,3 +26,4 @@ direnv
 apt-transport-https
 exiv2
 net-tools
+python-pygments
