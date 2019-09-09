@@ -1,3 +1,4 @@
+curl
 openssh-server
 ca-certificates 
 curl 
@@ -22,10 +23,6 @@ build-essential
 zfsutils-linux
 duplicity
 direnv
-
 apt-transport-https
-syncthing-gtk
 exiv2
-apt-get
-install
 net-tools

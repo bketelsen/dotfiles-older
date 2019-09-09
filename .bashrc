@@ -130,3 +130,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(direnv hook bash)"
+
+function _update_ps1() {
+    PS1="$($HOME/go/bin/powerline-go -error $?)"
+}
+
+if [ "$TERM" != "linux" ] && [ -f "$HOME/go/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
