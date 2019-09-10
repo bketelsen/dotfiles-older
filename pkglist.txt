@@ -5,6 +5,7 @@ unzip
 tar
 htop
 tilix
+zsh
 python3-pip
 python3-dev
 python-pip
@@ -32,3 +33,9 @@ libyaml-dev
 libgmp-dev
 libreadline-dev
 libz-dev
+libc6-dev
+libevent-dev
+libpcre2-dev
+libpng-dev
+libyaml-dev
+zlib1g-dev
