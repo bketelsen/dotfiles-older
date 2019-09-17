@@ -39,3 +39,4 @@ libpcre2-dev
 libpng-dev
 libyaml-dev
 zlib1g-dev
+xdg-utils
