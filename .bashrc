@@ -131,10 +131,15 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(direnv hook bash)"
 
-function _update_ps1() {
-    PS1="$($HOME/go/bin/powerline-go -error $?)"
-}
 
-if [ "$TERM" != "linux" ] && [ -f "$HOME/go/bin/powerline-go" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
+
+eval "$(starship init bash)"
