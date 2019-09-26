@@ -143,3 +143,5 @@ eval "$(direnv hook bash)"
 [ -f /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
 
 eval "$(starship init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
