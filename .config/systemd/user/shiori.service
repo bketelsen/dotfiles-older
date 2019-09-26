@@ -1,0 +1,8 @@
+[Unit]
+Description=Shiori Bookmark Manager
+
+[Service]
+ExecStart=/usr/local/bin/shiori serve -p 18080
+
+[Install]
+WantedBy=default.target
