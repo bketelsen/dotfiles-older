@@ -145,3 +145,7 @@ eval "$(direnv hook bash)"
 eval "$(starship init bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Wasmer
+export WASMER_DIR="/home/bjk/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
