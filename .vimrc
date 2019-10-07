@@ -1,6 +1,7 @@
 " I use the same vimrc for both nvim and vim
 call plug#begin('~/.vim/plugged')
 
+Plug 'liuchengxu/vim-clap'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'Raimondi/delimitMate'
