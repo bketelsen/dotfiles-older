@@ -607,4 +607,7 @@ nmap <Leader>gi <Plug>(grammarous-open-info-window)
 nmap <Leader>gc <Plug>(grammarous-close-info-window)
 nmap <Leader>gf <Plug>(grammarous-fixit)
 
+nmap <Leader>cf :Clap files<cr>
+nmap <Leader>cg :Clap grep<cr>
+nmap <Leader>cb :Clap buffers<cr>
 " vim: sw=2 sw=2 et

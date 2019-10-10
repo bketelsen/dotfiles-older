@@ -7,11 +7,14 @@ sp() {
 
 splash() {
   if [ ! -z $1 ] ; then	
+  	cd ~/projects/blogs/bkblog/storyblog/static/images
 	wget https://source.unsplash.com/$1/1600x900 -O $1.jpg
 	wget https://source.unsplash.com/$1/400x300 -O $1-thumb.jpg
+	echo -------------------
 	echo image: "/images/$1.jpg"
 	echo thumbnail: /images/$1-thumb.jpg
 	echo credit: "https://unsplash.com/photos/$1"
+	echo -------------------
   else
 		echo "!! Need photo ID"
   fi
