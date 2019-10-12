@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd "$HOME" || return
+
+
+system_type=$(uname -s)
+
+if [[ $system_type == "Darwin" ]]; then
+  echo "> Mac"
+fi
+
+if [[ $system_type == "Linux" ]]; then
+	sudo apt-get install -y $(cat ~/pkglist.txt | awk '{print $1}')
+
+	for file in ~/bin/setup/*.sh; do $file 2>/dev/null; done
+fi
+
+
+cargo install starship
+
