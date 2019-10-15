@@ -11,6 +11,12 @@ esac
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
+
+# load .profile
+
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -93,7 +99,6 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -149,3 +154,4 @@ eval "$(starship init bash)"
 # Wasmer
 export WASMER_DIR="/home/bjk/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+source /home/bjk/.local/bin/bashmarks.sh
