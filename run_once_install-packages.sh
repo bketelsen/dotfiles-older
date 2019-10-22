@@ -7,6 +7,8 @@ if [[ $system_type == "Darwin" ]]; then
 fi
 if [[ $system_type == "Linux" ]]; then 
 	sudo apt-get install -y $(cat ~/pkglist.txt | awk '{print $1}')
+  cd ~/bin/
+
 	./bashmarks.sh
 	./crystal.sh 
 	./docker.sh 
