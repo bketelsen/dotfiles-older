@@ -39,3 +39,4 @@ libyaml-dev
 zlib1g-dev
 xdg-utils
 byobu
+unison
