@@ -4,7 +4,6 @@ ca-certificates
 unzip
 tar
 htop
-tilix
 zsh
 python3-pip
 python3-dev
@@ -20,7 +19,6 @@ software-properties-common
 xclip
 ack
 build-essential
-zfsutils-linux
 duplicity
 direnv
 apt-transport-https
@@ -40,3 +38,4 @@ libpng-dev
 libyaml-dev
 zlib1g-dev
 xdg-utils
+byobu
