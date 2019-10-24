@@ -31,5 +31,6 @@ if [[ $system_type == "Linux" ]]; then
 	./zig.sh
 
 fi
+source $HOME/.cargo/env
 cargo install starship   
 
