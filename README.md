@@ -9,12 +9,9 @@ curl  -sSL https://git.io/bketelsen | bash
 ## Using
 
 ```
-chezmoi init https://github.com/bketelsen/dotfiles.git 
+chezmoi init --apply --verbose https://github.com/bketelsen/dotfiles.git 
 #or
-chezmoi init git@github.com:bketelsen/dotfiles.git
-
-# then
-chezmoi apply
+chezmoi init --apply --verbose git@github.com:bketelsen/dotfiles.git
 ```
 
 ## creating curl bash
