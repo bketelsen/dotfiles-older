@@ -1,0 +1,35 @@
+# Roots for synchronization 
+
+root = /Users/bjk
+root = ssh://bjk@10.1.0.4//home/bjk
+
+
+# paths to synchronize 
+
+path = projects
+
+
+
+# Ignore some names and paths 
+
+ignore = Name tmp* 
+ignore = Name temp* 
+ignore = Name .* 
+ignore = Name node_modules
+
+
+
+
+
+
+
+
+# keep log 
+
+log = true 
+
+
+
+# skip asking for confirmations for non-conflicting changes 
+
+auto = true 
