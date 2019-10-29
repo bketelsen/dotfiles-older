@@ -22,7 +22,6 @@ if [[ $system_type == "Darwin" ]]; then
   brew cask install docker
   brew install bash-completion
 
-  brew install unison
 
   defaults write com.apple.dock workspaces-auto-swoosh -bool NO
   defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -36,6 +35,7 @@ if [[ $system_type == "Darwin" ]]; then
 	./bashmarks.sh
 	./nvm.sh  
 	./rust.sh  
+  ./unison.sh
 
 fi
 if [[ $system_type == "Linux" ]]; then 
