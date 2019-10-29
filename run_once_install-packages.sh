@@ -16,11 +16,13 @@ if [[ $system_type == "Darwin" ]]; then
 
   brew install golang
   brew install direnv
+
   brew cask install docker
   brew cask install iterm2
   brew cask install docker
   brew install bash-completion
 
+  brew install unison
 
   defaults write com.apple.dock workspaces-auto-swoosh -bool NO
   defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
