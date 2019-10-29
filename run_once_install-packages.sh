@@ -9,12 +9,25 @@ if [[ $system_type == "Darwin" ]]; then
   brew install git
   brew install byobu
   brew install neovim
-  brew install python3
+  
+  brew install python
+  pip install --upgrade setuptools
+  pip install --upgrade pip
+
   brew install golang
   brew install direnv
   brew cask install docker
-
+  brew cask install iterm2
   brew cask install docker
+  brew install bash-completion
+
+
+  defaults write com.apple.dock workspaces-auto-swoosh -bool NO
+  defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+  defaults write com.apple.screencapture location /Users/bjk/Pictures/Screenshots
+
+
+  git config --global core.excludesfile ~/.gitignore
   sudo chsh -s /usr/local/bin/bash bjk
   cd ~/bin/setup/
 
