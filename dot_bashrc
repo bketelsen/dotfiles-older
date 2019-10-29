@@ -141,19 +141,19 @@ eval "$(direnv hook bash)"
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
+[ -f $HOME/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash ] && . $HOME/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.bash
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
+[ -f $HOME/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash ] && . $HOME/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.bash
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . /home/bjk/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
+[ -f $HOME/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash ] && . $HOME/.nvm/versions/node/v12.10.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.bash
 
 eval "$(starship init bash)"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Wasmer
-export WASMER_DIR="/home/bjk/.wasmer"
+export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
-source /home/bjk/.local/bin/bashmarks.sh
+source $HOME/.local/bin/bashmarks.sh
