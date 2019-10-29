@@ -10,8 +10,11 @@ if [[ $system_type == "Darwin" ]]; then
   brew install byobu
   brew install neovim
   brew install python3
+  brew install golang
   brew install direnv
+  brew cask install docker
 
+  brew cask install docker
   sudo chsh -s /usr/local/bin/bash bjk
   cd ~/bin/setup/
 
