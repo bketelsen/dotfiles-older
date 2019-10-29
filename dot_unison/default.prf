@@ -33,3 +33,10 @@ log = true
 # skip asking for confirmations for non-conflicting changes 
 
 auto = true 
+
+# batch mode, fewer prompts
+batch = true
+
+# sshhh
+
+silent = true
