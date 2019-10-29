@@ -6,7 +6,13 @@ if [[ $system_type == "Darwin" ]]; then
 	echo "> Mac" 
   # fix that zsh nonsense
   brew install bash
-  chsh -s /usr/local/bin/bash
+  brew install git
+  brew install byobu
+  brew install neovim
+  brew install python3
+  brew install direnv
+
+  sudo chsh -s /usr/local/bin/bash bjk
   cd ~/bin/setup/
 
 	./bashmarks.sh
@@ -32,5 +38,5 @@ if [[ $system_type == "Linux" ]]; then
 
 fi
 source $HOME/.cargo/env
-cargo install starship   
+cargo install --force starship   
 
