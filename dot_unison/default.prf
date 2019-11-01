@@ -3,13 +3,10 @@
 root = /Users/bjk
 root = ssh://bjk@10.1.0.4//home/bjk
 
-
 # paths to synchronize 
 
 path = projects
-
-
-
+path = Documents
 # Ignore some names and paths 
 
 ignore = Name tmp* 
@@ -17,26 +14,15 @@ ignore = Name temp*
 ignore = Name .* 
 ignore = Name node_modules
 
-
-
-
-
-
-
-
 # keep log 
-
 log = true 
-
-
-
+confirmbigdel = true
+fastcheck = true 
+prefer = newer 
+times = true 
 # skip asking for confirmations for non-conflicting changes 
-
 auto = true 
-
 # batch mode, fewer prompts
 batch = true
-
 # sshhh
-
 silent = true

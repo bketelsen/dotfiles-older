@@ -13,7 +13,7 @@ if [[ $system_type == "Darwin" ]]; then
   brew install python
   pip install --upgrade setuptools
   pip install --upgrade pip
-
+  brew install yarn
   brew install golang
   brew install direnv
 
