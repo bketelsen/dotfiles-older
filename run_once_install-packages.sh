@@ -43,15 +43,11 @@ if [[ $system_type == "Linux" ]]; then
   cd ~/bin/setup/
 
 	./bashmarks.sh
-	./crystal.sh 
 	./go.sh  
-	./hugo.sh 
-	./lxd.sh 
 	./neovim.sh 
 	./nvm.sh  
 	./rust.sh  
 	./yarn.sh   
-	./zig.sh
 
 fi
 source $HOME/.cargo/env
