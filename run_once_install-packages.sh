@@ -44,7 +44,6 @@ if [[ $system_type == "Linux" ]]; then
 
 	./bashmarks.sh
 	./crystal.sh 
-	./docker.sh 
 	./go.sh  
 	./hugo.sh 
 	./lxd.sh 
