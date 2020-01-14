@@ -1,17 +1,21 @@
 # Roots for synchronization 
 
-root = /Users/bjk
-root = ssh://bjk@10.1.0.4//home/bjk
+{{- if ne .chezmoi.os "darwin" }}
+root = /Users/{{ .chezmoi.username }}
+{{- else }}
+root = /home/{{ .chezmoi.username }}
+{{- end}}
+root = ssh://bjk@10.0.1.120//home/bjk
 
 # paths to synchronize 
 
 path = projects
-path = Documents
+path = go/src
+#path = Documents
 # Ignore some names and paths 
 
 ignore = Name tmp* 
 ignore = Name temp* 
-ignore = Name .* 
 ignore = Name node_modules
 
 # keep log 
@@ -25,4 +29,4 @@ auto = true
 # batch mode, fewer prompts
 batch = true
 # sshhh
-silent = true
+#silent = true
