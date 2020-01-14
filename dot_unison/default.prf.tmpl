@@ -1,9 +1,9 @@
 # Roots for synchronization 
 
 {{- if ne .chezmoi.os "darwin" }}
-root = /Users/{{ .chezmoi.username }}
-{{- else }}
 root = /home/{{ .chezmoi.username }}
+{{- else }}
+root = /Users/{{ .chezmoi.username }}
 {{- end}}
 root = ssh://bjk@10.0.1.120//home/bjk
 
