@@ -52,4 +52,4 @@ if [[ $system_type == "Linux" ]]; then
 fi
 source $HOME/.cargo/env
 cargo install --force starship   
-
+cargo install --force just

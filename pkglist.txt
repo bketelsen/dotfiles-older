@@ -40,3 +40,4 @@ zlib1g-dev
 xdg-utils
 byobu
 unison
+go-dep
