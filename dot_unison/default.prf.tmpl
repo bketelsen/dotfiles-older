@@ -5,7 +5,7 @@ root = /home/{{ .chezmoi.username }}
 {{- else }}
 root = /Users/{{ .chezmoi.username }}
 {{- end}}
-root = ssh://bjk@10.0.1.120//home/bjk
+root = ssh://bjk@cloud.brian.dev//home/bjk
 
 # paths to synchronize 
 
@@ -15,7 +15,6 @@ path = projects
 # Ignore some names and paths 
 
 ignore = Name tmp* 
-ignore = Name temp* 
 ignore = Name node_modules
 ignore = Name target
 
