@@ -22,3 +22,6 @@ curl -i https://git.io -F "url=https://raw.githubusercontent.com/bketelsen/dotfi
 ## Notes
 
 use the curl | bash above to INSTALL basic things like homebrew & chezmoi, maybe git, etc.  Then let chezmoi do what it does best with the `run_once_install-packages.sh` script which gets run when you do your first `apply`.
+
+## Walkthrough
+[Video Walkthrough on Youtube](https://www.youtube.com/watch?v=HXx6ugA98Qo)
