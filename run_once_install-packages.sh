@@ -50,6 +50,7 @@ if [[ $system_type == "Linux" ]]; then
 	./yarn.sh   
 
 fi
+nvim --headless +PlugInstall +UpdateRemotePlugins +qall
 source $HOME/.cargo/env
 cargo install --force starship   
 cargo install --force just
