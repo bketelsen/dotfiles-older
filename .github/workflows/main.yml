@@ -1,0 +1,12 @@
+name: URL Shortener
+on:
+  issues:
+    types: [opened, labeled, unlabeled]
+
+jobs:
+  shorten:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: wesleytodd/short@v0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
