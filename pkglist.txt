@@ -7,12 +7,10 @@ htop
 zsh
 python3-pip
 python3-dev
-python-pip
 build-essential
 git-core
 mercurial
 bzr
-python-dev
 ctags
 cmake
 software-properties-common
@@ -40,3 +38,4 @@ xdg-utils
 byobu
 unison
 go-dep
+pkg-config
