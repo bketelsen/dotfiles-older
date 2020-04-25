@@ -39,3 +39,4 @@ byobu
 unison
 go-dep
 pkg-config
+mosh
