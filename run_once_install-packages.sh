@@ -42,15 +42,9 @@ if [[ $system_type == "Linux" ]]; then
 	sudo apt-get install -y $(cat ~/.local/share/chezmoi/pkglist.txt | awk '{print $1}')
   cd ~/bin/setup/
 
-	./bashmarks.sh
-	./go.sh  
 	./neovim.sh 
 	./nvm.sh  
-	./rust.sh  
 	./yarn.sh   
 
 fi
 nvim --headless +PlugInstall +UpdateRemotePlugins +qall
-source $HOME/.cargo/env
-cargo install --force starship   
-cargo install --force just
