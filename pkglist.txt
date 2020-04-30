@@ -14,7 +14,6 @@ bzr
 ctags
 cmake
 software-properties-common
-xclip
 ack
 build-essential
 direnv
@@ -35,8 +34,5 @@ libpng-dev
 libyaml-dev
 zlib1g-dev
 xdg-utils
-byobu
-unison
-go-dep
 pkg-config
-mosh
+
