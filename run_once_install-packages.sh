@@ -46,4 +46,5 @@ if [[ $system_type == "Linux" ]]; then
 	./yarn.sh   
 
 fi
-nvim --headless +PlugInstall +UpdateRemotePlugins +qall
+
+# nvim --headless +PlugInstall +UpdateRemotePlugins +qall
