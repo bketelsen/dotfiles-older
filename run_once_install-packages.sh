@@ -42,7 +42,6 @@ if [[ $system_type == "Linux" ]]; then
 	sudo apt-get install -y $(cat ~/.local/share/chezmoi/pkglist.txt | awk '{print $1}')
   cd ~/bin/setup/
 
-	./neovim.sh 
 	./nvm.sh  
 	./yarn.sh   
 
