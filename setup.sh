@@ -19,6 +19,9 @@ fi
 
 # install chezmoi
 curl -sfL https://git.io/chezmoi | sh
+# https://serverfault.com/questions/447028/non-interactive-git-clone-ssh-fingerprint-prompt
+
+if [ ! -n "$(grep "^github.com " ~/.ssh/known_hosts)" ]; then ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null; fi
 
 export PATH=$HOME/bin:$PATH
 chezmoi init --apply --verbose git@github.com:bketelsen/dotfiles.git
