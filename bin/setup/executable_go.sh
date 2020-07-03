@@ -1,6 +1,6 @@
 #! /bin/bash
 set -e
-VERSION=1.14.2
+VERSION=1.14.4
 # Delete existing Go installation
 sudo rm -rf /usr/local/go
 # Install Go in /usr/local
