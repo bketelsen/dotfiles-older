@@ -1,0 +1,6 @@
+packages:
+  - action: package.install
+    repository: homebrew/cask-versions
+    list:
+      - firefox-developer-edition
+      - microsoft-edge-dev

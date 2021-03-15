@@ -1,0 +1,28 @@
+[user]
+  name = {{ user.name }}
+	email = bketelsen@gmail.com
+  yes = "yes"
+[init]
+	defaultBranch = main
+[alias]
+  rl = reflog
+  ls = log -S
+  s = status --short
+  a = add
+  c = commit -m
+  au = add -u :/
+  rm = rm
+  b = branch
+  m = merge --no-ff
+  mff = merge --ff-only
+  p = pull
+  pu = push
+  f = fetch
+  st = stash
+  stp = stash pop
+  d = diff
+  co = checkout
+  l = log --graph --pretty=format':%C(yellow)%h%C(green)%d%Creset %s %C(white) %an, %ar%Creset'
+  unstage = reset HEAD
+  staged = diff --cached
+  unstaged = diff

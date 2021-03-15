@@ -1,0 +1,7 @@
+actions:
+  - action: package.install
+    list:
+      - node
+      - typescript
+      - yarn
+      - pnpm

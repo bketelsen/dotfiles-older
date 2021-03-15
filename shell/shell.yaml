@@ -1,0 +1,14 @@
+actions:
+  - action: package.install
+    list:
+      - exa
+      - htop
+      - fd
+      - jq
+      - just
+      - ripgrep
+      - wget
+      - direnv
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
+      

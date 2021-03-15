@@ -1,0 +1,8 @@
+actions:
+  - action: file.copy
+    from: starship.toml
+    to: "{{ user.home_dir }}/.config/starship.toml"
+    template: false
+  - action: package.install
+    list:
+      - starship

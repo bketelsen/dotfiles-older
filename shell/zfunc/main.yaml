@@ -1,0 +1,5 @@
+actions:
+  - action: file.copy
+    from: hello
+    to: "{{ user.home_dir }}/.zfunc/hello"
+    template: false

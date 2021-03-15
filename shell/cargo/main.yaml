@@ -1,0 +1,5 @@
+actions:
+  - action: file.copy
+    from: env
+    to: "{{ user.home_dir }}/.cargo/env"
+    template: false

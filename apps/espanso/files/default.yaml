@@ -1,0 +1,24 @@
+secure_input_notification: false
+
+matches:
+  # Simple text replacement
+  - trigger: ":ecamm"
+    replace: "https://guest.ecamm.live/fd8d68bc8"
+
+  # Dates
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
