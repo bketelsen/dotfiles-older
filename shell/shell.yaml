@@ -5,6 +5,7 @@ actions:
       - htop
       - fd
       - jq
+      - jid
       - just
       - ripgrep
       - wget
