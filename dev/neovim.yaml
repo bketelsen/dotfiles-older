@@ -1,0 +1,6 @@
+actions:
+  - action: package.install
+    name: neovim
+    extra_args:
+      - --HEAD
+      
