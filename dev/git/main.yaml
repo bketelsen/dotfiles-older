@@ -7,7 +7,7 @@ actions:
 
   - action: file.copy
     from: config
-    to: "{{ user.home_dir }}/.config/git/config"
+    to: "{{ user.home_dir }}/.gitconfig"
   - action: file.copy
     from: ignores
     to: "{{ user.home_dir }}/.config/git/ignores"

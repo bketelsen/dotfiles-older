@@ -1,9 +1,20 @@
 [user]
-  name = {{ user.name }}
+	name = Brian Ketelsen
 	email = bketelsen@gmail.com
-  yes = "yes"
-[init]
-	defaultBranch = main
+[apply]
+  whitespace=warn
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+  ui=true
+[help]
+  autocorrect = 1
+[status]
+  submodule = 1
+[push]
+  # Only push branches that have been set up to track a remote branch.
+  default = current
 [alias]
   rl = reflog
   ls = log -S
@@ -26,3 +37,14 @@
   unstage = reset HEAD
   staged = diff --cached
   unstaged = diff
+[core]
+	excludesfile = ~/.gitignore
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
