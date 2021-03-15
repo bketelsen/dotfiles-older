@@ -1,4 +1,4 @@
-packages:
+actions:
   - action: package.install
     repository: homebrew/cask-versions
     list:
