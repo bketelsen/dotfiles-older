@@ -2,15 +2,12 @@ depends:
   - git
 
 actions:
-  - action: file.copy
+  - action: file.link
     from: zshrc
     to: "{{ user.home_dir }}/.zshrc"
-    template: false
-  - action: file.copy
+  - action: file.link
     from: zprofile
     to: "{{ user.home_dir }}/.zprofile"
-    template: false
-  - action: file.copy
+  - action: file.link
     from: zshenv
     to: "{{ user.home_dir }}/.zshenv"
-    template: false
