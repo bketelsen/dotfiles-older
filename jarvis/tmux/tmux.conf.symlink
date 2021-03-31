@@ -1,0 +1,122 @@
+#######################
+# ***    PLUGINS   *** #
+########################
+set -g @plugin 'tmux-plugins/tmux-cpu'
+
+########################
+# ***    DISPLAY   *** #
+########################
+
+# Set tmux to display in 256 colors
+set -g default-terminal    "screen-256color"
+set -ga terminal-overrides ",xterm-256color:Tc"
+
+# Set border colors
+set-option -g pane-border-style 'fg=#343D46,bg=colour0'
+set-option -g pane-active-border-style 'fg=colour3,bg=colour0'
+
+# Set status line message style
+set -g message-style "fg=colour5,bg=default"
+
+# Set mode style (including history bar)
+set -g mode-style "fg=colour3"
+
+########################
+# ***    GENERAL   *** #
+########################
+
+# Set Ctrl-a as the default prefix key combination
+# and unbind C-b to free it up
+set -g prefix C-a
+unbind C-b
+
+# Start windows numbering at 1
+set -g base-index 1
+
+# Start pane numbering at 1
+setw -g pane-base-index 1
+
+# Re-draw status window every 5 seconds
+set -g status-interval 5
+
+# set scrollback history to 10000 (10k)
+set -g history-limit 10000
+
+# enable scroll with mouse
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+
+# shorten command delay
+set -sg escape-time 1
+
+# use send-prefix to pass C-a through to application
+bind C-a send-prefix
+
+# reload ~/.tmux.conf using PREFIX r
+bind r source-file ~/.tmux.conf \; display "tmux.conf source"
+
+# Bind <prefix>- to split window horizontally
+bind - split-window -v
+
+# Bind <prefix>| to split window vertically
+bind | split-window -h
+
+# Map vim movement keys as pane movement keys with prefix
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# resize panes using PREFIX H, J, K, L
+bind H resize-pane -L 5
+bind J resize-pane -D 5
+bind K resize-pane -U 5
+bind L resize-pane -R 5
+
+# visual notification of activity in other windows
+setw -g monitor-activity on
+set -g visual-activity on
+
+#########################
+# ***  STATUS BAR   *** #
+#########################
+
+# Enable status bar
+set-option -g status on
+
+# Set window list to center
+set -g status-justify centre
+
+# Set default bg/fg settings for status bar
+set-option -g status-style bright,bg='#1B2B34',fg=default
+
+set-window-option -g window-status-current-format ''
+set-window-option -g window-status-current-format ''
+set-window-option -g window-status-current-style fg=colour114,bg=default,bright
+
+# Configure CPU plugin colors for statusline
+set -g @cpu_low_fg_color "#[fg=green]"
+set -g @cpu_medium_fg_color "#[fg=yellow]"
+set -g @cpu_high_fg_color "#[fg=red]"
+
+set -g @cpu_low_bg_color "#[bg=default]"
+set -g @cpu_medium_bg_color "#[bg=default]"
+set -g @cpu_high_bg_color "#[bg=default]"
+
+# Left Status Bar: [CPU Usage]
+set -g status-left "#{cpu_bg_color}#{cpu_fg_color} #{cpu_icon}#{cpu_percentage}"
+set -g status-left-length 85
+
+# Right Status Bar: [Session Name][Date][Time]
+set -g status-right "#[fg=magenta]#S #[fg=colour8]‹#[fg=yellow]#[fg=yellow,bold,bg=default] %b %d %Y #[fg=colour8]‹#[fg=green,bg=default]#[bg=default,fg=green,bold]%l:%M %p #[fg=blue]"
+
+# Auto-hide status bar if pane is maximized
+set-hook -g 'after-resize-pane'  'run-shell -b "if [ \#{window_zoomed_flag} -eq 1 ]; then tmux set status off; else tmux set status on; fi"'
+set-hook -g 'after-new-window'   'run-shell -b "if [ \#{window_zoomed_flag} -eq 1 ]; then tmux set status off; else tmux set status on; fi"'
+set-hook -g 'after-kill-pane'    'run-shell -b "if [ \#{window_zoomed_flag} -eq 1 ]; then tmux set status off; else tmux set status on; fi"'
+set-hook -g 'pane-exited'        'run-shell -b "if [ \#{window_zoomed_flag} -eq 1 ]; then tmux set status off; else tmux set status on; fi"'
+set-hook -g 'after-split-window' 'run-shell -b "if [ \#{window_zoomed_flag} -gt 1 ]; then tmux set status off; else tmux set status on; fi"'
+
+# Initialize TMUX plugin manager
+run '~/.tmux/plugins/tpm/tpm'

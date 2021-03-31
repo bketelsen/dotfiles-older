@@ -110,8 +110,8 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=( ~/.zfunc "${fpath[@]}" )
 
 # autoload all the functions in the .zfunc directory
-for fn in ~/.zfunc; do
-  autoload -Uz "$fn"
-done
+autoload -U $fpath[1]/*(.:t)
 
 eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
